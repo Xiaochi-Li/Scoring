@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true">
+
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.android.scoring.MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:descendantFocusability="beforeDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="question 1" />
+
+            <TextView
+                style="@style/Question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="What is the binary number of 874" />
+
+            <EditText
+                android:id="@+id/question_one_edittext"
+                style="@style/Answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Only 0s and 1s"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="question 2" />
+
+            <TextView
+
+                style="@style/Question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="log(a*b) equals to?" />
+
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- android:id="@+id/question_two_option_one"-->
+                <RadioButton
+                    style="@style/Answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="log(a) * log(b)" />
+
+                <RadioButton
+                    android:id="@+id/question_two_option_two"
+                    style="@style/Answer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="log(a) + log(b)" />
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="question 3" />
+
+            <TextView
+                style="@style/Question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2 equals to which one?" />
+
+            <CheckBox
+                android:id="@+id/check_box_one"
+                style="@style/Answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4^0.5" />
+
+            <CheckBox
+                android:id="@+id/check_box_two"
+                style="@style/Answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3-1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:descendantFocusability="beforeDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="question 4" />
+
+            <TextView
+                style="@style/Question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The sum of 1,2,3.....99,100 is?" />
+
+            <EditText
+                android:id="@+id/question_four_edittext"
+                style="@style/Answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="no hint"
+                android:inputType="number" />
+        </LinearLayout>
+
+
+        <Button
+            android:background="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="calculateScore"
+            android:textColor="#FFFFFF"
+            android:text="get score" />
+
+
+    </LinearLayout>
+</ScrollView>
